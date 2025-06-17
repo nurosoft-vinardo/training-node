@@ -1,0 +1,39 @@
+{
+  "name": "training-elibrary",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon --watch src --ext ts,json --exec \"ts-node src/server.ts\"",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "db:generate": "drizzle-kit generate --config=drizzle.config.ts",
+    "db:migrate": "ts-node ./scripts/migrate.ts",
+    "db:studio": "drizzle-kit studio"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^22.15.24",
+    "drizzle-kit": "^0.31.1",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/cors": "^2.8.18",
+    "@types/express": "^5.0.2",
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "drizzle-orm": "^0.44.0",
+    "express": "^5.1.0",
+    "pg": "^8.16.0",
+    "postgres": "^3.4.7",
+    "redis": "^5.1.1",
+    "uuid": "^11.1.0",
+    "zod": "^3.25.36"
+  }
+}
